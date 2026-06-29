@@ -9,7 +9,7 @@ class Company(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False, index=True)
     email = Column(String, unique=True, index=True, nullable=True)
-    phone = Column(String, unique=True, nullable=True)
+    phone = Column(String, nullable=True)
     location=Column(String)
 
     jobs = relationship("Job", back_populates="company")
