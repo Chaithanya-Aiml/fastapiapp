@@ -1,5 +1,16 @@
-function Welcome() {
-  return <h1>Welcome To TalentSpark</h1>
-}
+import {useState} from "react"
 
-export default Welcome
+function Counter() {
+    const [count, setCount] = useState(0)
+    const increment = () => {
+        setCount(count + 1);
+    }
+    return (
+        <div>
+          <h1>Count:{count}</h1>
+          <button onClick={increment}>Increment</button>
+        </div>
+      )
+    }
+    export default Counter
+
